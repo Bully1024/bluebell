@@ -33,3 +33,128 @@
 {"level":"DEBUG","time":"2023-01-06T13:18:56.012+0800","caller":"bluebell/main.go:44","msg":"logger init success..."}
 {"level":"INFO","time":"2023-01-06T13:19:51.987+0800","caller":"bluebell/main.go:86","msg":"Shutdown Server ..."}
 {"level":"INFO","time":"2023-01-06T13:19:51.988+0800","caller":"bluebell/main.go:95","msg":"Server exiting"}
+{"level":"DEBUG","time":"2023-01-06T13:19:56.990+0800","caller":"bluebell/main.go:44","msg":"logger init success..."}
+{"level":"INFO","time":"2023-01-06T13:26:47.782+0800","caller":"bluebell/main.go:86","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2023-01-06T13:26:47.782+0800","caller":"bluebell/main.go:95","msg":"Server exiting"}
+{"level":"DEBUG","time":"2023-01-06T13:26:51.338+0800","caller":"bluebell/main.go:44","msg":"logger init success..."}
+{"level":"INFO","time":"2023-01-06T13:26:56.903+0800","caller":"logger/logger.go:71","msg":"/","status":200,"method":"GET","path":"/","query":"","ip":"127.0.0.1","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36 Edg/108.0.1462.54","errors":"","cost":0}
+{"level":"INFO","time":"2023-01-06T13:26:57.217+0800","caller":"logger/logger.go:71","msg":"/favicon.ico","status":404,"method":"GET","path":"/favicon.ico","query":"","ip":"127.0.0.1","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36 Edg/108.0.1462.54","errors":"","cost":0}
+{"level":"INFO","time":"2023-01-06T13:27:10.340+0800","caller":"logger/logger.go:71","msg":"/signup","status":404,"method":"GET","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36 Edg/108.0.1462.54","errors":"","cost":0}
+{"level":"INFO","time":"2023-01-06T13:27:15.333+0800","caller":"logger/logger.go:71","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime-ApipostRuntime/1.1.0","errors":"","cost":0.0005042}
+{"level":"INFO","time":"2023-01-06T13:27:18.304+0800","caller":"logger/logger.go:71","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime-ApipostRuntime/1.1.0","errors":"","cost":0}
+{"level":"INFO","time":"2023-01-06T13:27:33.415+0800","caller":"bluebell/main.go:86","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2023-01-06T13:27:33.415+0800","caller":"bluebell/main.go:95","msg":"Server exiting"}
+{"level":"DEBUG","time":"2023-01-06T15:05:32.454+0800","caller":"bluebell/main.go:44","msg":"logger init success..."}
+{"level":"INFO","time":"2023-01-06T15:05:38.132+0800","caller":"logger/logger.go:71","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime-ApipostRuntime/1.1.0","errors":"","cost":0.0005039}
+{"level":"ERROR","time":"2023-01-06T15:06:08.980+0800","caller":"controller/user.go:21","msg":"SignUp with invalid param","error":"json: cannot unmarshal number into Go struct field ParamSignUp.password of type string"}
+{"level":"INFO","time":"2023-01-06T15:06:08.980+0800","caller":"logger/logger.go:71","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime-ApipostRuntime/1.1.0","errors":"","cost":0}
+{"level":"INFO","time":"2023-01-06T15:10:06.267+0800","caller":"bluebell/main.go:86","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2023-01-06T15:10:06.267+0800","caller":"bluebell/main.go:95","msg":"Server exiting"}
+{"level":"DEBUG","time":"2023-01-06T15:12:30.288+0800","caller":"bluebell/main.go:44","msg":"logger init success..."}
+{"level":"ERROR","time":"2023-01-06T15:12:35.114+0800","caller":"controller/user.go:29","msg":"SignUp with invalid param"}
+{"level":"INFO","time":"2023-01-06T15:12:35.114+0800","caller":"logger/logger.go:71","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime-ApipostRuntime/1.1.0","errors":"","cost":0.0005048}
+{"level":"INFO","time":"2023-01-06T15:12:38.759+0800","caller":"logger/logger.go:71","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime-ApipostRuntime/1.1.0","errors":"","cost":0}
+{"level":"INFO","time":"2023-01-06T15:24:00.644+0800","caller":"bluebell/main.go:86","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2023-01-06T15:24:00.644+0800","caller":"bluebell/main.go:95","msg":"Server exiting"}
+{"level":"DEBUG","time":"2023-01-06T15:24:04.434+0800","caller":"bluebell/main.go:44","msg":"logger init success..."}
+{"level":"INFO","time":"2023-01-06T15:24:10.137+0800","caller":"logger/logger.go:71","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime-ApipostRuntime/1.1.0","errors":"","cost":0.0005027}
+{"level":"ERROR","time":"2023-01-06T15:24:13.184+0800","caller":"controller/user.go:21","msg":"SignUp with invalid param","error":"Key: 'ParamSignUp.RePassword' Error:Field validation for 'RePassword' failed on the 'required' tag"}
+{"level":"INFO","time":"2023-01-06T15:24:13.184+0800","caller":"logger/logger.go:71","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime-ApipostRuntime/1.1.0","errors":"","cost":0}
+{"level":"INFO","time":"2023-01-06T15:24:17.780+0800","caller":"logger/logger.go:71","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime-ApipostRuntime/1.1.0","errors":"","cost":0}
+{"level":"ERROR","time":"2023-01-06T15:25:18.988+0800","caller":"controller/user.go:21","msg":"SignUp with invalid param","error":"Key: 'ParamSignUp.RePassword' Error:Field validation for 'RePassword' failed on the 'required' tag"}
+{"level":"INFO","time":"2023-01-06T15:25:18.988+0800","caller":"logger/logger.go:71","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime-ApipostRuntime/1.1.0","errors":"","cost":0}
+{"level":"INFO","time":"2023-01-06T15:26:13.120+0800","caller":"bluebell/main.go:86","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2023-01-06T15:26:13.120+0800","caller":"bluebell/main.go:95","msg":"Server exiting"}
+{"level":"DEBUG","time":"2023-01-06T15:26:17.729+0800","caller":"bluebell/main.go:44","msg":"logger init success..."}
+{"level":"INFO","time":"2023-01-06T15:26:22.643+0800","caller":"logger/logger.go:71","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime-ApipostRuntime/1.1.0","errors":"","cost":0.0003648}
+{"level":"ERROR","time":"2023-01-06T15:26:25.368+0800","caller":"controller/user.go:21","msg":"SignUp with invalid param","error":"Key: 'ParamSignUp.RePassword' Error:Field validation for 'RePassword' failed on the 'required' tag"}
+{"level":"INFO","time":"2023-01-06T15:26:25.368+0800","caller":"logger/logger.go:71","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime-ApipostRuntime/1.1.0","errors":"","cost":0}
+{"level":"INFO","time":"2023-01-06T15:41:37.251+0800","caller":"bluebell/main.go:86","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2023-01-06T15:41:37.251+0800","caller":"bluebell/main.go:95","msg":"Server exiting"}
+{"level":"DEBUG","time":"2023-01-06T15:42:56.882+0800","caller":"bluebell/main.go:45","msg":"logger init success..."}
+{"level":"ERROR","time":"2023-01-06T15:43:01.564+0800","caller":"controller/user.go:22","msg":"SignUp with invalid param","error":"Key: 'ParamSignUp.RePassword' Error:Field validation for 'RePassword' failed on the 'required' tag"}
+{"level":"INFO","time":"2023-01-06T15:43:01.565+0800","caller":"logger/logger.go:71","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime-ApipostRuntime/1.1.0","errors":"","cost":0.0005032}
+{"level":"ERROR","time":"2023-01-06T15:43:02.595+0800","caller":"controller/user.go:22","msg":"SignUp with invalid param","error":"Key: 'ParamSignUp.RePassword' Error:Field validation for 'RePassword' failed on the 'required' tag"}
+{"level":"INFO","time":"2023-01-06T15:43:02.595+0800","caller":"logger/logger.go:71","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime-ApipostRuntime/1.1.0","errors":"","cost":0}
+{"level":"ERROR","time":"2023-01-06T15:43:08.051+0800","caller":"controller/user.go:22","msg":"SignUp with invalid param","error":"Key: 'ParamSignUp.RePassword' Error:Field validation for 'RePassword' failed on the 'required' tag"}
+{"level":"INFO","time":"2023-01-06T15:43:08.051+0800","caller":"logger/logger.go:71","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime-ApipostRuntime/1.1.0","errors":"","cost":0}
+{"level":"INFO","time":"2023-01-06T15:43:43.552+0800","caller":"logger/logger.go:71","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime-ApipostRuntime/1.1.0","errors":"","cost":0.000505}
+{"level":"ERROR","time":"2023-01-06T15:44:05.110+0800","caller":"controller/user.go:22","msg":"SignUp with invalid param","error":"Key: 'ParamSignUp.RePassword' Error:Field validation for 'RePassword' failed on the 'required' tag"}
+{"level":"INFO","time":"2023-01-06T15:44:05.110+0800","caller":"logger/logger.go:71","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime-ApipostRuntime/1.1.0","errors":"","cost":0.0006075}
+{"level":"INFO","time":"2023-01-06T15:45:42.040+0800","caller":"bluebell/main.go:92","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2023-01-06T15:45:42.040+0800","caller":"bluebell/main.go:101","msg":"Server exiting"}
+{"level":"DEBUG","time":"2023-01-06T15:45:46.667+0800","caller":"bluebell/main.go:45","msg":"logger init success..."}
+{"level":"ERROR","time":"2023-01-06T15:45:51.660+0800","caller":"controller/user.go:22","msg":"SignUp with invalid param","error":"Key: 'ParamSignUp.RePassword' Error:Field validation for 'RePassword' failed on the 'required' tag"}
+{"level":"INFO","time":"2023-01-06T15:45:51.660+0800","caller":"logger/logger.go:71","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime-ApipostRuntime/1.1.0","errors":"","cost":0.0005034}
+{"level":"INFO","time":"2023-01-06T15:46:01.932+0800","caller":"bluebell/main.go:92","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2023-01-06T15:46:01.932+0800","caller":"bluebell/main.go:101","msg":"Server exiting"}
+{"level":"DEBUG","time":"2023-01-06T15:57:59.282+0800","caller":"bluebell/main.go:45","msg":"logger init success..."}
+{"level":"ERROR","time":"2023-01-06T15:58:04.200+0800","caller":"controller/user.go:22","msg":"SignUp with invalid param","error":"Key: 'ParamSignUp.RePassword' Error:Field validation for 'RePassword' failed on the 'required' tag"}
+{"level":"INFO","time":"2023-01-06T15:58:04.200+0800","caller":"logger/logger.go:71","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime-ApipostRuntime/1.1.0","errors":"","cost":0.0005379}
+{"level":"ERROR","time":"2023-01-06T15:58:05.341+0800","caller":"controller/user.go:22","msg":"SignUp with invalid param","error":"Key: 'ParamSignUp.RePassword' Error:Field validation for 'RePassword' failed on the 'required' tag"}
+{"level":"INFO","time":"2023-01-06T15:58:05.341+0800","caller":"logger/logger.go:71","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime-ApipostRuntime/1.1.0","errors":"","cost":0}
+{"level":"ERROR","time":"2023-01-06T15:58:06.228+0800","caller":"controller/user.go:22","msg":"SignUp with invalid param","error":"Key: 'ParamSignUp.RePassword' Error:Field validation for 'RePassword' failed on the 'required' tag"}
+{"level":"INFO","time":"2023-01-06T15:58:06.228+0800","caller":"logger/logger.go:71","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime-ApipostRuntime/1.1.0","errors":"","cost":0}
+{"level":"ERROR","time":"2023-01-06T15:58:17.091+0800","caller":"controller/user.go:22","msg":"SignUp with invalid param","error":"Key: 'ParamSignUp.RePassword' Error:Field validation for 'RePassword' failed on the 'required' tag"}
+{"level":"INFO","time":"2023-01-06T15:58:17.091+0800","caller":"logger/logger.go:71","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime-ApipostRuntime/1.1.0","errors":"","cost":0}
+{"level":"INFO","time":"2023-01-06T15:59:01.374+0800","caller":"bluebell/main.go:92","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2023-01-06T15:59:01.375+0800","caller":"bluebell/main.go:101","msg":"Server exiting"}
+{"level":"DEBUG","time":"2023-01-06T15:59:05.002+0800","caller":"bluebell/main.go:45","msg":"logger init success..."}
+{"level":"ERROR","time":"2023-01-06T15:59:10.080+0800","caller":"controller/user.go:22","msg":"SignUp with invalid param","error":"Key: 'ParamSignUp.RePassword' Error:Field validation for 'RePassword' failed on the 'required' tag"}
+{"level":"INFO","time":"2023-01-06T15:59:10.081+0800","caller":"logger/logger.go:71","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime-ApipostRuntime/1.1.0","errors":"","cost":0.0005029}
+{"level":"INFO","time":"2023-01-06T16:00:47.625+0800","caller":"bluebell/main.go:92","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2023-01-06T16:00:47.625+0800","caller":"bluebell/main.go:101","msg":"Server exiting"}
+{"level":"DEBUG","time":"2023-01-06T16:00:52.356+0800","caller":"bluebell/main.go:45","msg":"logger init success..."}
+{"level":"ERROR","time":"2023-01-06T16:01:06.055+0800","caller":"controller/user.go:22","msg":"SignUp with invalid param","error":"Key: 'ParamSignUp.Password' Error:Field validation for 'Password' failed on the 'required' tag"}
+{"level":"INFO","time":"2023-01-06T16:01:06.056+0800","caller":"logger/logger.go:71","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime-ApipostRuntime/1.1.0","errors":"","cost":0.000505}
+{"level":"INFO","time":"2023-01-06T16:02:41.907+0800","caller":"bluebell/main.go:92","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2023-01-06T16:02:41.907+0800","caller":"bluebell/main.go:101","msg":"Server exiting"}
+{"level":"DEBUG","time":"2023-01-06T16:02:46.016+0800","caller":"bluebell/main.go:45","msg":"logger init success..."}
+{"level":"INFO","time":"2023-01-06T16:02:51.186+0800","caller":"logger/logger.go:71","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime-ApipostRuntime/1.1.0","errors":"","cost":0.0005036}
+{"level":"ERROR","time":"2023-01-06T16:02:54.441+0800","caller":"controller/user.go:22","msg":"SignUp with invalid param","error":"Key: 'ParamSignUp.Password' Error:Field validation for 'Password' failed on the 'required' tag"}
+{"level":"INFO","time":"2023-01-06T16:02:54.442+0800","caller":"logger/logger.go:71","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime-ApipostRuntime/1.1.0","errors":"","cost":0.0005187}
+{"level":"INFO","time":"2023-01-06T20:10:49.920+0800","caller":"bluebell/main.go:92","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2023-01-06T20:10:49.927+0800","caller":"bluebell/main.go:101","msg":"Server exiting"}
+{"level":"DEBUG","time":"2023-01-06T20:10:57.336+0800","caller":"bluebell/main.go:45","msg":"logger init success..."}
+{"level":"INFO","time":"2023-01-06T20:11:23.843+0800","caller":"logger/logger.go:71","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime-ApipostRuntime/1.1.0","errors":"","cost":0.000504}
+{"level":"INFO","time":"2023-01-06T20:11:34.577+0800","caller":"logger/logger.go:71","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime-ApipostRuntime/1.1.0","errors":"","cost":0.0002066}
+{"level":"INFO","time":"2023-01-06T20:11:38.860+0800","caller":"logger/logger.go:71","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime-ApipostRuntime/1.1.0","errors":"","cost":0}
+{"level":"INFO","time":"2023-01-06T20:54:12.955+0800","caller":"bluebell/main.go:92","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2023-01-06T20:54:12.962+0800","caller":"bluebell/main.go:101","msg":"Server exiting"}
+{"level":"DEBUG","time":"2023-01-06T20:54:18.925+0800","caller":"bluebell/main.go:45","msg":"logger init success..."}
+{"level":"ERROR","time":"2023-01-06T20:54:37.831+0800","caller":"controller/user.go:22","msg":"SignUp with invalid param","error":"json: cannot unmarshal number into Go struct field ParamSignUp.re_password of type string"}
+{"level":"INFO","time":"2023-01-06T20:54:37.831+0800","caller":"logger/logger.go:71","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime-ApipostRuntime/1.1.0","errors":"","cost":0.0005031}
+{"level":"ERROR","time":"2023-01-06T20:58:13.671+0800","caller":"controller/user.go:22","msg":"SignUp with invalid param","error":"json: cannot unmarshal number into Go struct field ParamSignUp.re_password of type string"}
+{"level":"INFO","time":"2023-01-06T20:58:13.671+0800","caller":"logger/logger.go:71","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime-ApipostRuntime/1.1.0","errors":"","cost":0}
+{"level":"INFO","time":"2023-01-06T20:58:18.034+0800","caller":"bluebell/main.go:92","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2023-01-06T20:58:18.034+0800","caller":"bluebell/main.go:101","msg":"Server exiting"}
+{"level":"DEBUG","time":"2023-01-06T20:58:24.652+0800","caller":"bluebell/main.go:45","msg":"logger init success..."}
+{"level":"ERROR","time":"2023-01-06T20:58:28.683+0800","caller":"controller/user.go:22","msg":"SignUp with invalid param","error":"json: cannot unmarshal number into Go struct field ParamSignUp.re_password of type string"}
+{"level":"INFO","time":"2023-01-06T20:58:28.683+0800","caller":"logger/logger.go:71","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime-ApipostRuntime/1.1.0","errors":"","cost":0.0005028}
+{"level":"ERROR","time":"2023-01-06T20:58:35.529+0800","caller":"controller/user.go:22","msg":"SignUp with invalid param","error":"Key: 'ParamSignUp.re_password' Error:Field validation for 're_password' failed on the 'required' tag"}
+{"level":"INFO","time":"2023-01-06T20:58:35.529+0800","caller":"logger/logger.go:71","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime-ApipostRuntime/1.1.0","errors":"","cost":0}
+{"level":"INFO","time":"2023-01-06T21:03:25.020+0800","caller":"bluebell/main.go:92","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2023-01-06T21:03:25.020+0800","caller":"bluebell/main.go:101","msg":"Server exiting"}
+{"level":"DEBUG","time":"2023-01-06T21:03:30.481+0800","caller":"bluebell/main.go:45","msg":"logger init success..."}
+{"level":"ERROR","time":"2023-01-06T21:03:38.388+0800","caller":"controller/user.go:22","msg":"SignUp with invalid param","error":"Key: 'ParamSignUp.re_password' Error:Field validation for 're_password' failed on the 'eqfield' tag"}
+{"level":"INFO","time":"2023-01-06T21:03:38.388+0800","caller":"logger/logger.go:71","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime-ApipostRuntime/1.1.0","errors":"","cost":0.000513}
+{"level":"INFO","time":"2023-01-06T21:03:53.049+0800","caller":"logger/logger.go:71","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime-ApipostRuntime/1.1.0","errors":"","cost":0.0006659}
+{"level":"ERROR","time":"2023-01-06T21:03:59.049+0800","caller":"controller/user.go:22","msg":"SignUp with invalid param","error":"Key: 'ParamSignUp.re_password' Error:Field validation for 're_password' failed on the 'eqfield' tag"}
+{"level":"INFO","time":"2023-01-06T21:03:59.049+0800","caller":"logger/logger.go:71","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime-ApipostRuntime/1.1.0","errors":"","cost":0}
+{"level":"INFO","time":"2023-01-06T21:19:52.127+0800","caller":"bluebell/main.go:92","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2023-01-06T21:19:52.127+0800","caller":"bluebell/main.go:101","msg":"Server exiting"}
+{"level":"DEBUG","time":"2023-01-06T21:19:56.916+0800","caller":"bluebell/main.go:45","msg":"logger init success..."}
+{"level":"INFO","time":"2023-01-06T21:22:17.323+0800","caller":"bluebell/main.go:92","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2023-01-06T21:22:17.323+0800","caller":"bluebell/main.go:101","msg":"Server exiting"}
+{"level":"DEBUG","time":"2023-01-06T21:22:21.205+0800","caller":"bluebell/main.go:45","msg":"logger init success..."}
+{"level":"DEBUG","time":"2023-01-06T21:26:07.632+0800","caller":"bluebell/main.go:45","msg":"logger init success..."}
+{"level":"ERROR","time":"2023-01-06T21:26:12.988+0800","caller":"controller/user.go:22","msg":"SignUp with invalid param","error":"Key: 'ParamSignUp.re_password' Error:Field validation for 're_password' failed on the 'eqfield' tag\nKey: 'ParamSignUp.re_password' Error:Field validation for 're_password' failed on the 'eqfield' tag"}
+{"level":"INFO","time":"2023-01-06T21:26:12.988+0800","caller":"logger/logger.go:71","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime-ApipostRuntime/1.1.0","errors":"","cost":0.0005087}
+{"level":"ERROR","time":"2023-01-06T21:26:16.939+0800","caller":"controller/user.go:22","msg":"SignUp with invalid param","error":"Key: 'ParamSignUp.re_password' Error:Field validation for 're_password' failed on the 'eqfield' tag\nKey: 'ParamSignUp.re_password' Error:Field validation for 're_password' failed on the 'eqfield' tag"}
+{"level":"INFO","time":"2023-01-06T21:26:16.939+0800","caller":"logger/logger.go:71","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime-ApipostRuntime/1.1.0","errors":"","cost":0}
+{"level":"INFO","time":"2023-01-06T21:26:34.373+0800","caller":"logger/logger.go:71","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime-ApipostRuntime/1.1.0","errors":"","cost":0}
+{"level":"ERROR","time":"2023-01-06T21:29:28.675+0800","caller":"controller/user.go:22","msg":"SignUp with invalid param","error":"Key: 'ParamSignUp.re_password' Error:Field validation for 're_password' failed on the 'eqfield' tag\nKey: 'ParamSignUp.re_password' Error:Field validation for 're_password' failed on the 'eqfield' tag"}
+{"level":"INFO","time":"2023-01-06T21:29:28.675+0800","caller":"logger/logger.go:71","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime-ApipostRuntime/1.1.0","errors":"","cost":0}
+{"level":"INFO","time":"2023-01-06T21:31:27.404+0800","caller":"bluebell/main.go:92","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2023-01-06T21:31:27.404+0800","caller":"bluebell/main.go:101","msg":"Server exiting"}
+{"level":"DEBUG","time":"2023-01-06T21:31:32.282+0800","caller":"bluebell/main.go:45","msg":"logger init success..."}

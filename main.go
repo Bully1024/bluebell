@@ -1,6 +1,7 @@
 package main
 
 import (
+	"GoWebCode/bluebell/controller"
 	"GoWebCode/bluebell/dao/mysql"
 	"GoWebCode/bluebell/dao/redis"
 	"GoWebCode/bluebell/logger"
@@ -59,12 +60,17 @@ func main() {
 		fmt.Printf("init snowflake failed,err:%v\n", err)
 		return
 	}
+	//初始化gin框架内置的校验使用的翻译器
+	if err := controller.InitTrans("zh"); err != nil {
+		fmt.Printf("init validator trans failed,err:%v\n", err)
+		return
+	}
 	//5.注册路由
 	r := routes.Setup()
 	//6.启动服务（优雅关机）
 	srv := &http.Server{
 		//Todo pay attention:!!!Addr不要丢掉：
-		Addr:    fmt.Sprintf(":%d", viper.GetInt("post")),
+		Addr:    fmt.Sprintf(":%d", viper.GetInt("port")),
 		Handler: r,
 	}
 
