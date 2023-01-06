@@ -64,7 +64,7 @@ func main() {
 	//6.启动服务（优雅关机）
 	srv := &http.Server{
 		//Todo pay attention:!!!Addr不要丢掉：
-		Addr:    fmt.Sprintf(":%d", viper.GetInt("app.post")),
+		Addr:    fmt.Sprintf(":%d", viper.GetInt("post")),
 		Handler: r,
 	}
 
@@ -89,7 +89,7 @@ func main() {
 	defer cancel()
 	// 5秒内优雅关闭服务（将未处理完的请求处理完再关闭服务），超过5秒就超时退出
 	if err := srv.Shutdown(ctx); err != nil {
-		zap.L().Fatal("Server Shutdown:", zap.Error((err)))
+		zap.L().Fatal("Server Shutdown:", zap.Error(err))
 	}
 
 	zap.L().Info("Server exiting")

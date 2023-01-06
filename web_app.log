@@ -17,3 +17,19 @@
 {"level":"DEBUG","time":"2023-01-05T00:27:29.055+0800","caller":"bluebell/main.go:44","msg":"logger init success..."}
 {"level":"INFO","time":"2023-01-05T00:28:26.333+0800","caller":"bluebell/main.go:86","msg":"Shutdown Server ..."}
 {"level":"INFO","time":"2023-01-05T00:28:26.333+0800","caller":"bluebell/main.go:95","msg":"Server exiting"}
+{"level":"DEBUG","time":"2023-01-05T17:14:06.629+0800","caller":"bluebell/main.go:44","msg":"logger init success..."}
+{"level":"INFO","time":"2023-01-05T17:19:31.483+0800","caller":"bluebell/main.go:86","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2023-01-05T17:19:31.483+0800","caller":"bluebell/main.go:95","msg":"Server exiting"}
+{"level":"DEBUG","time":"2023-01-05T17:19:35.484+0800","caller":"bluebell/main.go:44","msg":"logger init success..."}
+{"level":"INFO","time":"2023-01-06T00:40:05.923+0800","caller":"bluebell/main.go:86","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2023-01-06T00:40:05.924+0800","caller":"bluebell/main.go:95","msg":"Server exiting"}
+{"level":"DEBUG","time":"2023-01-06T00:40:10.178+0800","caller":"bluebell/main.go:44","msg":"logger init success..."}
+{"level":"DEBUG","time":"2023-01-06T00:40:32.508+0800","caller":"bluebell/main.go:44","msg":"logger init success..."}
+{"level":"INFO","time":"2023-01-06T00:41:58.444+0800","caller":"bluebell/main.go:86","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2023-01-06T00:41:58.444+0800","caller":"bluebell/main.go:95","msg":"Server exiting"}
+{"level":"DEBUG","time":"2023-01-06T00:42:01.808+0800","caller":"bluebell/main.go:44","msg":"logger init success..."}
+{"level":"INFO","time":"2023-01-06T01:21:20.665+0800","caller":"bluebell/main.go:86","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2023-01-06T01:21:20.665+0800","caller":"bluebell/main.go:95","msg":"Server exiting"}
+{"level":"DEBUG","time":"2023-01-06T13:18:56.012+0800","caller":"bluebell/main.go:44","msg":"logger init success..."}
+{"level":"INFO","time":"2023-01-06T13:19:51.987+0800","caller":"bluebell/main.go:86","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2023-01-06T13:19:51.988+0800","caller":"bluebell/main.go:95","msg":"Server exiting"}
