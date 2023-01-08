@@ -24,7 +24,7 @@ func InitTrans(locale string) (err error) {
 	// 修改gin框架中的Validator引擎属性，实现自定制
 	if v, ok := binding.Validator.Engine().(*validator.Validate); ok {
 
-		// 注册一个获取json tag的自定义方法
+		// 注册一个获取json tag的自定义方法 RePassword是我们后端定义的结构体中的字段名，而请求中使用的是re_password字段。
 		v.RegisterTagNameFunc(func(fld reflect.StructField) string {
 			name := strings.SplitN(fld.Tag.Get("json"), ",", 2)[0]
 			if name == "-" {
