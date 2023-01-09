@@ -269,3 +269,43 @@
 {"level":"INFO","time":"2023-01-07T14:57:50.685+0800","caller":"logger/logger.go:71","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime-ApipostRuntime/1.1.0","errors":"","cost":0.0003976}
 {"level":"INFO","time":"2023-01-07T18:26:07.820+0800","caller":"bluebell/main.go:92","msg":"Shutdown Server ..."}
 {"level":"INFO","time":"2023-01-07T18:26:07.821+0800","caller":"bluebell/main.go:101","msg":"Server exiting"}
+{"level":"DEBUG","time":"2023-01-09T16:22:53.635+0800","caller":"bluebell/main.go:45","msg":"logger init success..."}
+{"level":"DEBUG","time":"2023-01-09T16:23:07.238+0800","caller":"bluebell/main.go:45","msg":"logger init success..."}
+{"level":"ERROR","time":"2023-01-09T16:24:01.534+0800","caller":"controller/user.go:24","msg":"SignUp with invalid param","error":"Key: 'ParamSignUp.re_password' Error:Field validation for 're_password' failed on the 'eqfield' tag"}
+{"level":"INFO","time":"2023-01-09T16:24:01.534+0800","caller":"logger/logger.go:71","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime-ApipostRuntime/1.1.0","errors":"","cost":0.0001077}
+{"level":"INFO","time":"2023-01-09T16:24:08.496+0800","caller":"logger/logger.go:71","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime-ApipostRuntime/1.1.0","errors":"","cost":0.0394801}
+{"level":"INFO","time":"2023-01-09T16:24:45.414+0800","caller":"logger/logger.go:71","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime-ApipostRuntime/1.1.0","errors":"","cost":0.000503}
+{"level":"INFO","time":"2023-01-09T16:26:23.646+0800","caller":"bluebell/main.go:92","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2023-01-09T16:26:23.646+0800","caller":"bluebell/main.go:101","msg":"Server exiting"}
+{"level":"DEBUG","time":"2023-01-09T16:26:50.821+0800","caller":"bluebell/main.go:45","msg":"logger init success..."}
+{"level":"INFO","time":"2023-01-09T16:27:00.654+0800","caller":"logger/logger.go:71","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime-ApipostRuntime/1.1.0","errors":"","cost":0.0015743}
+{"level":"INFO","time":"2023-01-09T16:28:05.432+0800","caller":"bluebell/main.go:92","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2023-01-09T16:28:05.432+0800","caller":"bluebell/main.go:101","msg":"Server exiting"}
+{"level":"DEBUG","time":"2023-01-09T16:28:09.283+0800","caller":"bluebell/main.go:45","msg":"logger init success..."}
+{"level":"ERROR","time":"2023-01-09T16:28:14.062+0800","caller":"controller/user.go:50","msg":"logic.Signup failed","error":"Error 1054 (42S22): Unknown column 'user_id' in 'field list'"}
+{"level":"INFO","time":"2023-01-09T16:28:14.062+0800","caller":"logger/logger.go:71","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime-ApipostRuntime/1.1.0","errors":"","cost":0.0012532}
+{"level":"INFO","time":"2023-01-09T16:30:17.206+0800","caller":"bluebell/main.go:92","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2023-01-09T16:30:17.206+0800","caller":"bluebell/main.go:101","msg":"Server exiting"}
+{"level":"DEBUG","time":"2023-01-09T16:30:20.537+0800","caller":"bluebell/main.go:45","msg":"logger init success..."}
+{"level":"ERROR","time":"2023-01-09T16:30:20.561+0800","caller":"mysql/mysql.go:37","msg":"connect DB failed","error":"Error 1049 (42000): Unknown database 'bluebell'"}
+{"level":"DEBUG","time":"2023-01-09T16:30:25.374+0800","caller":"bluebell/main.go:45","msg":"logger init success..."}
+{"level":"ERROR","time":"2023-01-09T16:30:25.397+0800","caller":"mysql/mysql.go:37","msg":"connect DB failed","error":"Error 1049 (42000): Unknown database 'bluebell'"}
+{"level":"DEBUG","time":"2023-01-09T16:31:14.063+0800","caller":"bluebell/main.go:45","msg":"logger init success..."}
+{"level":"ERROR","time":"2023-01-09T16:31:14.086+0800","caller":"mysql/mysql.go:37","msg":"connect DB failed","error":"Error 1049 (42000): Unknown database 'bluebell'"}
+{"level":"DEBUG","time":"2023-01-09T16:33:19.271+0800","caller":"bluebell/main.go:45","msg":"logger init success..."}
+{"level":"INFO","time":"2023-01-09T16:33:24.418+0800","caller":"logger/logger.go:71","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime-ApipostRuntime/1.1.0","errors":"","cost":0.0134899}
+{"level":"INFO","time":"2023-01-09T16:36:18.435+0800","caller":"bluebell/main.go:92","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2023-01-09T16:36:18.436+0800","caller":"bluebell/main.go:101","msg":"Server exiting"}
+{"level":"DEBUG","time":"2023-01-09T16:36:22.406+0800","caller":"bluebell/main.go:45","msg":"logger init success..."}
+{"level":"INFO","time":"2023-01-09T16:38:10.943+0800","caller":"bluebell/main.go:92","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2023-01-09T16:38:10.943+0800","caller":"bluebell/main.go:101","msg":"Server exiting"}
+{"level":"DEBUG","time":"2023-01-09T16:38:50.913+0800","caller":"bluebell/main.go:45","msg":"logger init success..."}
+{"level":"ERROR","time":"2023-01-09T16:38:57.755+0800","caller":"controller/user.go:50","msg":"logic.Signup failed","error":"Error 1146 (42S02): Table 'bluebell.user' doesn't exist"}
+{"level":"INFO","time":"2023-01-09T16:38:57.756+0800","caller":"logger/logger.go:71","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime-ApipostRuntime/1.1.0","errors":"","cost":0.0020385}
+{"level":"INFO","time":"2023-01-09T16:41:42.678+0800","caller":"bluebell/main.go:92","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2023-01-09T16:41:42.678+0800","caller":"bluebell/main.go:101","msg":"Server exiting"}
+{"level":"DEBUG","time":"2023-01-09T16:41:45.604+0800","caller":"bluebell/main.go:45","msg":"logger init success..."}
+{"level":"INFO","time":"2023-01-09T16:41:51.423+0800","caller":"logger/logger.go:71","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime-ApipostRuntime/1.1.0","errors":"","cost":0.004492}
+{"level":"INFO","time":"2023-01-09T16:43:19.230+0800","caller":"bluebell/main.go:92","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2023-01-09T16:43:19.230+0800","caller":"bluebell/main.go:101","msg":"Server exiting"}
+{"level":"DEBUG","time":"2023-01-09T16:43:44.923+0800","caller":"bluebell/main.go:45","msg":"logger init success..."}

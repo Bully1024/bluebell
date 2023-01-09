@@ -23,7 +23,7 @@ func Init(cfg *settings.MySQLConfig) (err error) {
 		cfg.Password,
 		cfg.Host,
 		cfg.Port,
-		cfg.Dbname,
+		cfg.DB,
 	)
 	//Todo 博客
 	// 不会校验账号密码是否正确
