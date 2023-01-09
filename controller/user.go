@@ -16,8 +16,8 @@ import (
 // SignUpHandler 处理注册请求的函数
 func SignUpHandler(c *gin.Context) {
 	//1.获取参数和参数校验
-	//p := new(models.ParamSignUp)
-	var p models.ParamSignUp
+	p := new(models.ParamSignUp)
+	//var p models.ParamSignUp
 	if err := c.ShouldBind(&p); err != nil {
 		//请求参数有误，直接返回响应 只能判断参数的类型!!!
 		fmt.Println(err)
@@ -46,7 +46,7 @@ func SignUpHandler(c *gin.Context) {
 	//}
 	fmt.Println(p)
 	//2.业务处理
-	logic.SignUp(&p)
+	logic.SignUp(p)
 	//3.返回响应
 	c.JSON(http.StatusOK, gin.H{
 		"msg": "success",
