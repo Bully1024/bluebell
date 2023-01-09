@@ -58,3 +58,36 @@ func SignUpHandler(c *gin.Context) {
 		"msg": "success",
 	})
 }
+
+// LoginHandler 登录函数
+func LoginHandler(c *gin.Context) {
+	//1.获得请求参数
+	p := new(models.ParamLogIn)
+	if err := c.ShouldBind(p); err != nil {
+		fmt.Println(err)
+		zap.L().Error("LogIn with invalid param", zap.Error(err))
+		c.JSON(http.StatusOK, gin.H{
+			"msg": err.Error(),
+		})
+		return
+	}
+	//2.校验参数
+	if err := logic.LogIn(p); err != nil {
+		zap.L().Error("logic.Login failed", zap.Error(err))
+		c.JSON(http.StatusOK, gin.H{
+			"msg": "登录失败",
+		})
+		return
+	}
+	//3.业务逻辑处理
+	//4.返回响应
+	c.JSON(http.StatusOK, gin.H{
+		"msg": "success",
+	})
+}
+
+/*
+自己写完整的登录过程的问题
+zap日志使用不清楚
+sql语句不会判断密码是否相等
+*/

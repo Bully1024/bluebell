@@ -9,3 +9,8 @@ type ParamSignUp struct {
 	RePassword string `json:"re_password" binding:"required"`
 	//RePassword string `json:"re_password" binding:"required,eqfield=Password"`
 }
+
+type ParamLogIn struct {
+	Username      string `json:"username" binding:"required"`
+	InputPassword string `json:"input_password" binding:"required"`
+}
