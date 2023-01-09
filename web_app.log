@@ -309,3 +309,21 @@
 {"level":"INFO","time":"2023-01-09T16:43:19.230+0800","caller":"bluebell/main.go:92","msg":"Shutdown Server ..."}
 {"level":"INFO","time":"2023-01-09T16:43:19.230+0800","caller":"bluebell/main.go:101","msg":"Server exiting"}
 {"level":"DEBUG","time":"2023-01-09T16:43:44.923+0800","caller":"bluebell/main.go:45","msg":"logger init success..."}
+{"level":"ERROR","time":"2023-01-09T16:43:50.088+0800","caller":"controller/user.go:50","msg":"logic.Signup failed","error":"用户已存在"}
+{"level":"INFO","time":"2023-01-09T16:43:50.088+0800","caller":"logger/logger.go:71","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime-ApipostRuntime/1.1.0","errors":"","cost":0.0023451}
+{"level":"INFO","time":"2023-01-09T17:24:08.442+0800","caller":"bluebell/main.go:92","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2023-01-09T17:24:08.442+0800","caller":"bluebell/main.go:101","msg":"Server exiting"}
+{"level":"INFO","time":"2023-01-09T17:25:01.546+0800","caller":"logger/logger.go:52","msg":"init logger success"}
+{"level":"DEBUG","time":"2023-01-09T17:25:01.569+0800","caller":"bluebell/main.go:45","msg":"logger init success..."}
+{"level":"ERROR","time":"2023-01-09T17:25:16.029+0800","caller":"controller/user.go:24","msg":"SignUp with invalid param","error":"Key: 'ParamSignUp.re_password' Error:Field validation for 're_password' failed on the 'eqfield' tag"}
+{"level":"INFO","time":"2023-01-09T17:25:16.029+0800","caller":"logger/logger.go:85","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime-ApipostRuntime/1.1.0","errors":"","cost":0.0005204}
+{"level":"INFO","time":"2023-01-09T17:27:15.095+0800","caller":"bluebell/main.go:92","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2023-01-09T17:27:15.096+0800","caller":"bluebell/main.go:101","msg":"Server exiting"}
+{"level":"INFO","time":"2023-01-09T17:27:18.994+0800","caller":"logger/logger.go:52","msg":"init logger success"}
+{"level":"DEBUG","time":"2023-01-09T17:27:19.015+0800","caller":"bluebell/main.go:45","msg":"logger init success..."}
+{"level":"INFO","time":"2023-01-09T17:30:53.736+0800","caller":"bluebell/main.go:92","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2023-01-09T17:30:53.736+0800","caller":"bluebell/main.go:101","msg":"Server exiting"}
+{"level":"INFO","time":"2023-01-09T17:30:57.272+0800","caller":"logger/logger.go:52","msg":"init logger success"}
+{"level":"DEBUG","time":"2023-01-09T17:30:57.293+0800","caller":"bluebell/main.go:45","msg":"logger init success..."}
+{"level":"INFO","time":"2023-01-09T17:31:04.516+0800","caller":"bluebell/main.go:92","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2023-01-09T17:31:04.516+0800","caller":"bluebell/main.go:101","msg":"Server exiting"}
