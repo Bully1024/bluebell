@@ -27,7 +27,7 @@ func CheckUserExist(username string) (err error) {
 	return
 }
 
-// CheckUserExist2 检查指定用户名的用户是否存在
+// CheckUserExist2 检查指定用户名的用户是否存在 -diy 合并至mysql.login 弃用
 func CheckUserExist2(username string) (b bool) {
 	sqlStr := `select count(user_id) from user where username = ?`
 	var count int
@@ -58,23 +58,36 @@ func encryptPassword(oPassword string) string {
 	return hex.EncodeToString(h.Sum([]byte(oPassword)))
 }
 
-// CheckPasswordisReally判断密码是否真确
-func CheckPasswordisReally(user *models.User) (b bool) {
-	//对输入的密码进行加密，方便校验
-	h := md5.New()
-	h.Write([]byte(secret))
-	user.Password = hex.EncodeToString(h.Sum([]byte(user.Password)))
-	//执行sql语句，查看对应username的password是否正确
-	//sqlStr := `select password where username = ?`
-	if 1 == 1 {
-		//返回错误
-		return false
-	}
-	return true
-}
+// CheckPasswordisReally 判断密码是否真确 -diy
+//func CheckPasswordisReally(user *models.User) (err error) {
+//	//对输入的密码进行加密，方便校验
+//	//h := md5.New()
+//	//h.Write([]byte(secret))
+//	//user.Password = hex.EncodeToString(h.Sum([]byte(user.Password)))
+//
+//	//用户输入的密码
+//	user.Password = encryptPassword(user.Password)
+//	//执行sql语句，查看对应username的password是否正确
+//	sqlStr := `select password from user where username = ?`
+//	var rPassword string
+//	err = db.Get(rPassword, sqlStr, user.Username)
+//	fmt.Println("mysql real:", rPassword)
+//	fmt.Println("input:", user.Password)
+//	if err == sql.ErrNoRows {
+//		return errors.New("用户或密码错误")
+//	}
+//	if err != nil {
+//		//查询数据库错误
+//		return err
+//	}
+//	if user.Password != rPassword {
+//		return errors.New("密码错误")
+//	}
+//	return
+//}
 
 func Login(user *models.User) (err error) {
-	oPassword := user.Password //用户登录Inputpassword
+	oPassword := user.Password //用户登录Input_password
 	sqlStr := `select user_id,username,password from user where username= ?`
 	err = db.Get(user, sqlStr, user.Username)
 	if err == sql.ErrNoRows {

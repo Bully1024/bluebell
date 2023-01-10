@@ -25,27 +25,16 @@ func SignUp(p *models.ParamSignUp) (err error) {
 	return mysql.InsertUser(user)
 }
 
-//自己独立完成得登录逻辑处理函数
+// 自己独立完成得登录逻辑处理函数 -diy
 //func LogIn(p *models.ParamLogIn) (err error) {
-//	if mysql.CheckUserExist2(p.Username) {
-//		//用户存在，校验密码是否正确
-//		//创建一个user实例，便于传参
-//		user := &models.User{
-//			Username: p.Username,
-//			Password: p.InputPassword,
-//		}
-//		//校验密码是否正确
-//		if mysql.CheckPasswordisReally(user) {
-//			//密码正确，登录成功，返回nil
-//			return
-//		} else {
-//			//密码错误，重新登录
-//			return
-//		}
-//	} else {
-//		zap.L().Error("Login failed：not find this user")
-//		return
+//	//用户存在，校验密码是否正确
+//	//创建一个user实例，便于传参
+//	user := &models.User{
+//		Username: p.Username,
+//		Password: p.InputPassword,
 //	}
+//	//校验密码是否正确
+//	return mysql.CheckPasswordisReally(user)
 //}
 
 func LogIn(p *models.ParamLogIn) (err error) {
