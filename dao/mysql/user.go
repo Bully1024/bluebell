@@ -3,6 +3,7 @@ package mysql
 import (
 	"GoWebCode/bluebell/models"
 	"crypto/md5"
+	"database/sql"
 	"encoding/hex"
 	"errors"
 
@@ -70,4 +71,23 @@ func CheckPasswordisReally(user *models.User) (b bool) {
 		return false
 	}
 	return true
+}
+
+func Login(user *models.User) (err error) {
+	oPassword := user.Password //用户登录Inputpassword
+	sqlStr := `select user_id,username,password from user where username= ?`
+	err = db.Get(user, sqlStr, user.Username)
+	if err == sql.ErrNoRows {
+		return errors.New("用户或密码错误")
+	}
+	if err != nil {
+		//查询数据库错误
+		return err
+	}
+	//判断密码是否正确
+	password := encryptPassword(oPassword)
+	if password != user.Password {
+		return errors.New("密码错误")
+	}
+	return
 }
