@@ -1,11 +1,12 @@
 package controller
 
 import (
+	"GoWebCode/bluebell/dao/mysql"
 	"GoWebCode/bluebell/logic"
 	_ "GoWebCode/bluebell/logic"
 	"GoWebCode/bluebell/models"
+	"errors"
 	"fmt"
-	"net/http"
 
 	"go.uber.org/zap"
 
@@ -25,15 +26,20 @@ func SignUpHandler(c *gin.Context) {
 		//判断err是不是validator.ValidationErrors类型
 		errs, ok := err.(validator.ValidationErrors) //类型断言
 		if !ok {
-			c.JSON(http.StatusOK, gin.H{
-				"msgs": err.Error(),
-			})
+			//c.JSON(http.StatusOK, gin.H{
+			//	"msg": err.Error(),
+			//})
+			//优化：使用封装函数
+			ResponseError(c, CodeInvalidParam)
 			return
 		}
+		//Todo 无法翻译中文 login函数存在同样问题
 		// validator.ValidationErrors类型错误则进行翻译
-		c.JSON(http.StatusOK, gin.H{
-			"msgg": removeTopStruct(errs.Translate(trans)), //翻译错误
-		})
+		//c.JSON(http.StatusOK, gin.H{
+		//	"msgg": removeTopStruct(errs.Translate(trans)), //翻译错误
+		//})
+		//优化：使用封装函数
+		ResponseErrorWithMsg(c, CodeInvalidParam, removeTopStruct(errs.Translate(trans)))
 		return
 	}
 	//手动对请求参数进行详细的业务规则校验 使用gin框架内置库validator做参数校验，就不需要手动进行校验
@@ -48,15 +54,24 @@ func SignUpHandler(c *gin.Context) {
 	//2.业务处理
 	if err := logic.SignUp(p); err != nil {
 		zap.L().Error("logic.Signup failed", zap.Error(err))
-		c.JSON(http.StatusOK, gin.H{
-			"msg": "注册失败",
-		})
+		//c.JSON(http.StatusOK, gin.H{
+		//	"msg": "注册失败",
+		//})
+		//优化，使用封装函数
+		//Todo errors.Is 1.13新特性
+		if errors.Is(err, mysql.ErrorUserExist) {
+			ResponseError(c, CodeUserExist)
+			return
+		}
+		ResponseError(c, CodeServerBusy)
 		return
 	}
 	//3.返回响应
-	c.JSON(http.StatusOK, gin.H{
-		"msg": "success",
-	})
+	//c.JSON(http.StatusOK, gin.H{
+	//	"msg": "success",
+	//})
+	//优化：封装函数
+	ResponseSuccess(c, nil)
 }
 
 // LoginHandler 登录函数
@@ -101,27 +116,31 @@ func LoginHandler(c *gin.Context) {
 		//判断err是不是validator.ValidationErrors类型
 		errs, ok := err.(validator.ValidationErrors) //类型断言
 		if !ok {
-			c.JSON(http.StatusOK, gin.H{
-				"msgs": err.Error(),
-			})
+			ResponseError(c, CodeInvalidParam)
 			return
 		}
+		ResponseErrorWithMsg(c, CodeInvalidParam, removeTopStruct(errs.Translate(trans)))
 		// validator.ValidationErrors类型错误则进行翻译
-		c.JSON(http.StatusOK, gin.H{
-			"msgg": removeTopStruct(errs.Translate(trans)), //翻译错误
-		})
+		//c.JSON(http.StatusOK, gin.H{
+		//	"msg": removeTopStruct(errs.Translate(trans)), //翻译错误
+		//})
 		return
 	}
 	//2.业务逻辑处理
 	if err := logic.LogIn(p); err != nil {
 		zap.L().Error("logic.Login failed", zap.String("username", p.Username), zap.Error(err))
-		c.JSON(http.StatusOK, gin.H{
-			"msg": "用户名或密码错误",
-		})
+		//c.JSON(http.StatusOK, gin.H{
+		//	"msg": "用户名或密码错误",
+		//})
+		if errors.Is(err, mysql.ErrorUserNotExist) {
+			ResponseError(c, CodeUserNotExist)
+		}
+		ResponseError(c, CodeInvalidPassword)
 		return
 	}
 	//3.返回响应
-	c.JSON(http.StatusOK, gin.H{
-		"mag": "登录成功",
-	})
+	//c.JSON(http.StatusOK, gin.H{
+	//	"mag": "登录成功",
+	//})
+	ResponseSuccess(c, nil)
 }
