@@ -364,3 +364,8 @@
 {"level":"INFO","time":"2023-01-10T23:52:01.780+0800","caller":"logger/logger.go:85","msg":"/login","status":200,"method":"POST","path":"/login","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime-ApipostRuntime/1.1.0","errors":"","cost":0.001695}
 {"level":"INFO","time":"2023-01-10T23:55:58.788+0800","caller":"bluebell/main.go:92","msg":"Shutdown Server ..."}
 {"level":"INFO","time":"2023-01-10T23:55:58.789+0800","caller":"bluebell/main.go:101","msg":"Server exiting"}
+{"level":"INFO","time":"2023-01-12T00:20:41.831+0800","caller":"logger/logger.go:52","msg":"init logger success"}
+{"level":"DEBUG","time":"2023-01-12T00:20:41.852+0800","caller":"bluebell/main.go:45","msg":"logger init success..."}
+{"level":"INFO","time":"2023-01-12T00:21:06.302+0800","caller":"logger/logger.go:85","msg":"/login","status":200,"method":"POST","path":"/login","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime-ApipostRuntime/1.1.0","errors":"","cost":0.0296349}
+{"level":"INFO","time":"2023-01-12T00:23:56.450+0800","caller":"bluebell/main.go:92","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2023-01-12T00:23:56.450+0800","caller":"bluebell/main.go:101","msg":"Server exiting"}

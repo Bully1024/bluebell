@@ -3,6 +3,7 @@ package logic
 import (
 	"GoWebCode/bluebell/dao/mysql"
 	"GoWebCode/bluebell/models"
+	"GoWebCode/bluebell/pkg/jwt"
 	"GoWebCode/bluebell/pkg/snowflake"
 )
 
@@ -37,10 +38,15 @@ func SignUp(p *models.ParamSignUp) (err error) {
 //	return mysql.CheckPasswordisReally(user)
 //}
 
-func LogIn(p *models.ParamLogIn) (err error) {
+func LogIn(p *models.ParamLogIn) (token string, err error) {
 	user := &models.User{
 		Username: p.Username,
 		Password: p.InputPassword,
 	}
-	return mysql.Login(user)
+	//传递的是指针，就能达到user.UserID
+	if err := mysql.Login(user); err != nil {
+		return "", err
+	}
+	//生成JWT
+	return jwt.GenToken(user.UserID, user.Username)
 }
