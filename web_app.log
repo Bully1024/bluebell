@@ -369,3 +369,59 @@
 {"level":"INFO","time":"2023-01-12T00:21:06.302+0800","caller":"logger/logger.go:85","msg":"/login","status":200,"method":"POST","path":"/login","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime-ApipostRuntime/1.1.0","errors":"","cost":0.0296349}
 {"level":"INFO","time":"2023-01-12T00:23:56.450+0800","caller":"bluebell/main.go:92","msg":"Shutdown Server ..."}
 {"level":"INFO","time":"2023-01-12T00:23:56.450+0800","caller":"bluebell/main.go:101","msg":"Server exiting"}
+{"level":"INFO","time":"2023-01-14T15:52:12.919+0800","caller":"logger/logger.go:52","msg":"init logger success"}
+{"level":"DEBUG","time":"2023-01-14T15:52:12.939+0800","caller":"bluebell/main.go:45","msg":"logger init success..."}
+{"level":"INFO","time":"2023-01-14T15:52:27.976+0800","caller":"logger/logger.go:52","msg":"init logger success"}
+{"level":"DEBUG","time":"2023-01-14T15:52:27.996+0800","caller":"bluebell/main.go:45","msg":"logger init success..."}
+{"level":"INFO","time":"2023-01-14T16:07:08.765+0800","caller":"logger/logger.go:52","msg":"init logger success"}
+{"level":"DEBUG","time":"2023-01-14T16:07:08.785+0800","caller":"bluebell/main.go:45","msg":"logger init success..."}
+{"level":"INFO","time":"2023-01-14T16:08:49.534+0800","caller":"logger/logger.go:52","msg":"init logger success"}
+{"level":"DEBUG","time":"2023-01-14T16:08:49.554+0800","caller":"bluebell/main.go:45","msg":"logger init success..."}
+{"level":"INFO","time":"2023-01-14T16:09:17.907+0800","caller":"logger/logger.go:52","msg":"init logger success"}
+{"level":"DEBUG","time":"2023-01-14T16:09:17.928+0800","caller":"bluebell/main.go:45","msg":"logger init success..."}
+{"level":"INFO","time":"2023-01-14T16:09:36.664+0800","caller":"logger/logger.go:52","msg":"init logger success"}
+{"level":"DEBUG","time":"2023-01-14T16:09:36.685+0800","caller":"bluebell/main.go:45","msg":"logger init success..."}
+{"level":"INFO","time":"2023-01-14T16:24:36.229+0800","caller":"logger/logger.go:52","msg":"init logger success"}
+{"level":"DEBUG","time":"2023-01-14T16:24:36.249+0800","caller":"bluebell/main.go:45","msg":"logger init success..."}
+{"level":"INFO","time":"2023-01-14T19:14:07.536+0800","caller":"logger/logger.go:52","msg":"init logger success"}
+{"level":"DEBUG","time":"2023-01-14T19:14:07.556+0800","caller":"bluebell/main.go:45","msg":"logger init success..."}
+{"level":"INFO","time":"2023-01-14T19:14:34.829+0800","caller":"bluebell/main.go:92","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2023-01-14T19:14:34.829+0800","caller":"bluebell/main.go:101","msg":"Server exiting"}
+{"level":"INFO","time":"2023-01-14T19:15:48.997+0800","caller":"logger/logger.go:52","msg":"init logger success"}
+{"level":"DEBUG","time":"2023-01-14T19:15:49.017+0800","caller":"bluebell/main.go:45","msg":"logger init success..."}
+{"level":"INFO","time":"2023-01-14T19:17:04.932+0800","caller":"logger/logger.go:85","msg":"/api/v1/community","status":200,"method":"POST","path":"/api/v1/community","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime-ApipostRuntime/1.1.0","errors":"","cost":0.0006247}
+{"level":"INFO","time":"2023-01-14T19:19:48.177+0800","caller":"logger/logger.go:85","msg":"/api/v1/login","status":200,"method":"POST","path":"/api/v1/login","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime-ApipostRuntime/1.1.0","errors":"","cost":0.0073}
+{"level":"INFO","time":"2023-01-14T19:24:26.560+0800","caller":"bluebell/main.go:92","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2023-01-14T19:24:26.561+0800","caller":"bluebell/main.go:101","msg":"Server exiting"}
+{"level":"INFO","time":"2023-01-14T19:24:30.568+0800","caller":"logger/logger.go:52","msg":"init logger success"}
+{"level":"DEBUG","time":"2023-01-14T19:24:30.589+0800","caller":"bluebell/main.go:45","msg":"logger init success..."}
+{"level":"INFO","time":"2023-01-14T19:24:37.822+0800","caller":"logger/logger.go:85","msg":"/api/v1/login","status":200,"method":"POST","path":"/api/v1/login","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime-ApipostRuntime/1.1.0","errors":"","cost":0.0012125}
+{"level":"INFO","time":"2023-01-14T19:25:16.134+0800","caller":"logger/logger.go:85","msg":"/api/v1/community","status":200,"method":"POST","path":"/api/v1/community","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime-ApipostRuntime/1.1.0","errors":"","cost":0}
+{"level":"INFO","time":"2023-01-14T19:25:47.478+0800","caller":"logger/logger.go:85","msg":"/api/v1/community","status":200,"method":"GET","path":"/api/v1/community","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime-ApipostRuntime/1.1.0","errors":"","cost":0.0015075}
+{"level":"INFO","time":"2023-01-14T19:34:49.321+0800","caller":"bluebell/main.go:92","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2023-01-14T19:34:49.321+0800","caller":"bluebell/main.go:101","msg":"Server exiting"}
+{"level":"INFO","time":"2023-01-14T19:35:58.870+0800","caller":"logger/logger.go:52","msg":"init logger success"}
+{"level":"DEBUG","time":"2023-01-14T19:35:58.893+0800","caller":"bluebell/main.go:45","msg":"logger init success..."}
+{"level":"INFO","time":"2023-01-14T19:59:44.707+0800","caller":"logger/logger.go:52","msg":"init logger success"}
+{"level":"DEBUG","time":"2023-01-14T19:59:44.727+0800","caller":"bluebell/main.go:45","msg":"logger init success..."}
+{"level":"ERROR","time":"2023-01-14T19:59:44.730+0800","caller":"mysql/mysql.go:37","msg":"connect DB failed","error":"Error 1193 (HY000): Unknown system variable 'lco'"}
+{"level":"INFO","time":"2023-01-14T20:02:02.093+0800","caller":"logger/logger.go:52","msg":"init logger success"}
+{"level":"DEBUG","time":"2023-01-14T20:02:02.117+0800","caller":"bluebell/main.go:45","msg":"logger init success..."}
+{"level":"ERROR","time":"2023-01-14T20:02:02.120+0800","caller":"mysql/mysql.go:37","msg":"connect DB failed","error":"Error 1193 (HY000): Unknown system variable 'lco'"}
+{"level":"INFO","time":"2023-01-14T20:02:03.709+0800","caller":"logger/logger.go:52","msg":"init logger success"}
+{"level":"DEBUG","time":"2023-01-14T20:02:03.732+0800","caller":"bluebell/main.go:45","msg":"logger init success..."}
+{"level":"ERROR","time":"2023-01-14T20:02:03.734+0800","caller":"mysql/mysql.go:37","msg":"connect DB failed","error":"Error 1193 (HY000): Unknown system variable 'lco'"}
+{"level":"INFO","time":"2023-01-14T20:03:18.616+0800","caller":"logger/logger.go:52","msg":"init logger success"}
+{"level":"DEBUG","time":"2023-01-14T20:03:18.636+0800","caller":"bluebell/main.go:45","msg":"logger init success..."}
+{"level":"ERROR","time":"2023-01-14T20:03:18.638+0800","caller":"mysql/mysql.go:37","msg":"connect DB failed","error":"Error 1193 (HY000): Unknown system variable 'lco'"}
+{"level":"INFO","time":"2023-01-14T20:03:29.054+0800","caller":"logger/logger.go:52","msg":"init logger success"}
+{"level":"DEBUG","time":"2023-01-14T20:03:29.073+0800","caller":"bluebell/main.go:45","msg":"logger init success..."}
+{"level":"ERROR","time":"2023-01-14T20:03:29.076+0800","caller":"mysql/mysql.go:37","msg":"connect DB failed","error":"Error 1193 (HY000): Unknown system variable 'lco'"}
+{"level":"INFO","time":"2023-01-14T20:06:19.961+0800","caller":"logger/logger.go:52","msg":"init logger success"}
+{"level":"DEBUG","time":"2023-01-14T20:06:19.982+0800","caller":"bluebell/main.go:45","msg":"logger init success..."}
+{"level":"INFO","time":"2023-01-14T20:06:23.888+0800","caller":"logger/logger.go:85","msg":"/api/v1/community/1","status":200,"method":"GET","path":"/api/v1/community/1","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime-ApipostRuntime/1.1.0","errors":"","cost":0.0010165}
+{"level":"INFO","time":"2023-01-14T20:07:49.643+0800","caller":"logger/logger.go:85","msg":"/api/v1/community/2","status":200,"method":"GET","path":"/api/v1/community/2","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime-ApipostRuntime/1.1.0","errors":"","cost":0.0006242}
+{"level":"INFO","time":"2023-01-14T20:11:00.107+0800","caller":"logger/logger.go:52","msg":"init logger success"}
+{"level":"DEBUG","time":"2023-01-14T20:11:00.128+0800","caller":"bluebell/main.go:45","msg":"logger init success..."}
+{"level":"INFO","time":"2023-01-14T20:11:20.541+0800","caller":"logger/logger.go:52","msg":"init logger success"}
+{"level":"DEBUG","time":"2023-01-14T20:11:20.564+0800","caller":"bluebell/main.go:45","msg":"logger init success..."}
