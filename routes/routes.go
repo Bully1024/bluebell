@@ -24,15 +24,16 @@ func Setup(mode string) *gin.Engine {
 	v1.POST("/login", controller.LoginHandler)
 
 	v1.Use(middlewares.JWTAuthMiddleware()) //应用JWT认证中间件
-
 	{
 		v1.GET("/community", controller.CommunityHandler)
 		v1.GET("/community/:id", controller.CommunityDetailHandler)
+		v1.POST("/post", controller.CreatePostHandler)
+		v1.GET("/post/:id", controller.GetPostDetailHandler)
 	}
 
 	r.NoRoute(func(c *gin.Context) {
 		c.JSON(http.StatusOK, gin.H{
-			"msg": "404",
+			"msg": "4044",
 		})
 	})
 	return r

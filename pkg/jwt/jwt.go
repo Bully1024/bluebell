@@ -17,7 +17,7 @@ var mySecret = []byte("春天春天快来")
 // 我们这里需要额外记录一个username字段，所以要自定义结构体
 // 如果想要保存更多信息，都可以添加到这个结构体中
 type MyClaims struct {
-	UserID   int64  `json:"username"`
+	UserID   int64  `json:"user_id"`
 	Username string `json:"username"`
 	jwt.StandardClaims
 }
