@@ -38,15 +38,20 @@ func SignUp(p *models.ParamSignUp) (err error) {
 //	return mysql.CheckPasswordisReally(user)
 //}
 
-func LogIn(p *models.ParamLogIn) (token string, err error) {
-	user := &models.User{
+func LogIn(p *models.ParamLogIn) (user *models.User, err error) {
+	user = &models.User{
 		Username: p.Username,
 		Password: p.InputPassword,
 	}
 	//传递的是指针，就能达到user.UserID
 	if err := mysql.Login(user); err != nil {
-		return "", err
+		return nil, err
 	}
 	//生成JWT
-	return jwt.GenToken(user.UserID, user.Username)
+	token, err := jwt.GenToken(user.UserID, user.Username)
+	if err != nil {
+		return
+	}
+	user.Token = token
+	return
 }

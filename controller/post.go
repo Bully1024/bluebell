@@ -3,7 +3,6 @@ package controller
 import (
 	"GoWebCode/bluebell/logic"
 	"GoWebCode/bluebell/models"
-	"fmt"
 	"strconv"
 
 	"go.uber.org/zap"
@@ -27,7 +26,6 @@ func CreatePostHandler(c *gin.Context) {
 		ResponseError(c, CodeNeedLogin)
 		return
 	}
-	fmt.Println("get userID by GetCurrentUserID:", userID)
 	p.AuthorID = userID
 
 	//2.创建帖子
@@ -36,7 +34,6 @@ func CreatePostHandler(c *gin.Context) {
 		ResponseError(c, CodeServerBusy)
 		return
 	}
-	fmt.Printf("p detial is:%+#v", p)
 	//3.返回响应
 	ResponseSuccess(c, nil)
 }
@@ -61,4 +58,19 @@ func GetPostDetailHandler(c *gin.Context) {
 	}
 	//3.返回响应
 	ResponseSuccess(c, data)
+}
+
+// GetPostListHandler 获取帖子列表的处理函数
+func GetPostListHandler(c *gin.Context) {
+	//获取分页参数
+	page, size := GetPageInfo(c)
+	//获取数据
+	data, err := logic.GetPostList(page, size)
+	if err != nil {
+		zap.L().Error("logic.GetPostList() failed", zap.Error(err))
+		ResponseError(c, CodeServerBusy)
+		return
+	}
+	ResponseSuccess(c, data)
+	//返回响应
 }
