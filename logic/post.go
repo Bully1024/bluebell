@@ -2,6 +2,7 @@ package logic
 
 import (
 	"GoWebCode/bluebell/dao/mysql"
+	"GoWebCode/bluebell/dao/redis"
 	"GoWebCode/bluebell/models"
 	"GoWebCode/bluebell/pkg/snowflake"
 	"fmt"
@@ -14,7 +15,14 @@ func CreatPost(p *models.Post) (err error) {
 	p.ID = snowflake.GenID()
 	//2.保存到数据库
 	//3.返回
-	return mysql.CreatePost(p)
+	err = mysql.CreatePost(p)
+	if err != nil {
+		return err
+	}
+	fmt.Println("老铁666", p.ID)
+	err = redis.CreatePost(p.ID)
+	fmt.Println("老铁666")
+	return
 }
 
 // GetPostId 根据帖子ID查询帖子详情数据

@@ -5,6 +5,8 @@ import (
 	"GoWebCode/bluebell/models"
 	"fmt"
 
+	"go.uber.org/zap"
+
 	"github.com/go-playground/validator"
 
 	"github.com/gin-gonic/gin"
@@ -36,6 +38,17 @@ func PostVoteController(c *gin.Context) {
 		ResponseErrorWithMsg(c, CodeInvalidParam, errData)
 		return
 	}
-	logic.PostVote()
+	//获取当前用户ID
+	userID, err := GetCurrentUserID(c)
+	if err != nil {
+		ResponseError(c, CodeNeedLogin)
+		return
+	}
+	//具体投票业务逻辑
+	if err := logic.VoteForPost(userID, p); err != nil {
+		zap.L().Error("logic.VoteForPost() failed", zap.Error(err))
+		ResponseError(c, CodeServerBusy)
+		return
+	}
 	ResponseSuccess(c, nil)
 }
