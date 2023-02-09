@@ -27,7 +27,6 @@ func PostVoteController(c *gin.Context) {
 		//fmt.Println("bool", err.(validator.ValidationErrors))
 		errs, ok := err.(validator.ValidationErrors) //类型断言
 		if !ok {
-			//Todo find bug
 			fmt.Println("trans errs after:", errs)
 			ResponseError(c, CodeInvalidParam)
 			return

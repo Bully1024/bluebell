@@ -27,7 +27,6 @@ func CreatePostHandler(c *gin.Context) {
 		return
 	}
 	p.AuthorID = userID
-
 	//2.创建帖子
 	if err := logic.CreatPost(p); err != nil {
 		zap.L().Error("logic.CreatPost(p) failed", zap.Error(err))
@@ -66,6 +65,40 @@ func GetPostListHandler(c *gin.Context) {
 	page, size := GetPageInfo(c)
 	//获取数据
 	data, err := logic.GetPostList(page, size)
+	if err != nil {
+		zap.L().Error("logic.GetPostList() failed", zap.Error(err))
+		ResponseError(c, CodeServerBusy)
+		return
+	}
+	ResponseSuccess(c, data)
+	//返回响应
+}
+
+// GetPostListHandler2 升级版帖子列表接口
+// 根据前端传来的参数（创建时间或者分数），动态的获取帖子列表
+func GetPostListHandler2(c *gin.Context) {
+	//1.获取参数
+	//2.去redis查询id列表
+	//3.根据id去数据库查询帖子的详细信息
+
+	//GET请求获取参数（query string)：/api/v1/postlist2？page=1&size=10&order=time
+	//直接通过gin获取分页参数
+
+	//初始化结构体时指定默认参数
+	p := &models.ParamPostList{
+		Page:  1,
+		Size:  10,
+		Order: models.Ordertime,
+	}
+	//c.ShouldBindJSON()如果请求体携带的是json格式的数据，采用这个方法。注意tag的使用！！！
+	//c.ShouldBind() 根据请求的类型数据自动去获取数据
+	if err := c.ShouldBindQuery(p); err != nil {
+		zap.L().Error("GetPostListHandler2 with invalid params", zap.Error(err))
+		ResponseError(c, CodeInvalidParam)
+		return
+	}
+	//获取数据
+	data, err := logic.GetPostList2(p)
 	if err != nil {
 		zap.L().Error("logic.GetPostList() failed", zap.Error(err))
 		ResponseError(c, CodeServerBusy)

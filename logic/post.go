@@ -5,7 +5,6 @@ import (
 	"GoWebCode/bluebell/dao/redis"
 	"GoWebCode/bluebell/models"
 	"GoWebCode/bluebell/pkg/snowflake"
-	"fmt"
 
 	"go.uber.org/zap"
 )
@@ -17,11 +16,14 @@ func CreatPost(p *models.Post) (err error) {
 	//3.返回
 	err = mysql.CreatePost(p)
 	if err != nil {
+		zap.L().Error("mysql.CreatPost(&p) failed", zap.Error(err))
 		return err
 	}
-	fmt.Println("老铁666", p.ID)
-	err = redis.CreatePost(p.ID)
-	fmt.Println("老铁666")
+	//ToDo BUG!!!!!!!!!!!!!!!!!!!!!!!!!
+	if err = redis.CreatePost(p.ID); err != nil {
+		zap.L().Error("redis.CreatePost failed", zap.Error(err))
+		return err
+	}
 	return
 }
 
@@ -61,11 +63,10 @@ func GetPostId(pid int64) (data *models.ApiPostDetail, err error) {
 	return
 }
 
-// 获取帖子列表
+// GetPostList 获取帖子列表
 func GetPostList(page, size int64) (data []*models.ApiPostDetail, err error) {
 	posts, err := mysql.GetPostList(page, size)
 	if err != nil {
-		fmt.Println("6453542346")
 		return nil, err
 	}
 	data = make([]*models.ApiPostDetail, 0, len(posts))
@@ -93,8 +94,53 @@ func GetPostList(page, size int64) (data []*models.ApiPostDetail, err error) {
 			CommunityDetail: community,
 		}
 		data = append(data, postdetail)
-		fmt.Println(data)
 	}
 
+	return
+}
+
+func GetPostList2(p *models.ParamPostList) (data []*models.ApiPostDetail, err error) {
+	//2.去redis查询id列表
+	ids, err := redis.GetPostIDsInOrder(p)
+	if err != nil {
+		return
+	}
+	if len(ids) == 0 {
+		zap.L().Warn("redis.GetPostIDsInOrder() return 0 data")
+		return
+	}
+	zap.L().Debug("GetPostList2", zap.Any("ids", ids))
+	//3.根据id去Mysql数据库查询帖子的详细信息
+	//返回的数据还要按照我给定的id的顺序返回->mysql:order by
+	posts, err := mysql.GetPostListByIDs(ids)
+	if err != nil {
+		return
+	}
+	zap.L().Debug("GetPostList2", zap.Any("posts", posts))
+	//将帖子的作者以及分区信息查询出来填充到帖子
+	for _, post := range posts {
+		//根据作者id查询作者信息
+		user, err := mysql.GetUserById(post.AuthorID)
+		if err != nil {
+			zap.L().Error("mysql.GetUserById(post.AuthorID)",
+				zap.Int64("authorID", post.AuthorID),
+				zap.Error(err))
+			continue
+		}
+		//根据社区id查询社区详细信息
+		community, err := mysql.GetCommunityDetailByID(post.CommunityID)
+		if err != nil {
+			zap.L().Error("mysql.GetUserById(post.AuthorID)",
+				zap.Int64("communityID", post.CommunityID),
+				zap.Error(err))
+			continue
+		}
+		postdetail := &models.ApiPostDetail{
+			AuthorName:      user.Username,
+			Post:            post,
+			CommunityDetail: community,
+		}
+		data = append(data, postdetail)
+	}
 	return
 }
