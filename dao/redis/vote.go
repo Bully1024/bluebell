@@ -3,6 +3,7 @@ package redis
 import (
 	"errors"
 	"math"
+	"strconv"
 	"time"
 
 	"github.com/go-redis/redis"
@@ -23,7 +24,7 @@ func TestZAdd(postID int64) (err error) {
 	return
 }
 
-func CreatePost(postID int64) (err error) {
+func CreatePost(postID, communityID int64) (err error) {
 	pipeline := client.TxPipeline()
 	//帖子时间
 	err = pipeline.ZAdd(getRedisKey(KeyPostTimeZSet), redis.Z{
@@ -38,6 +39,9 @@ func CreatePost(postID int64) (err error) {
 		Score:  float64(time.Now().Unix()),
 		Member: postID,
 	})
+	//把帖子id加到社区的set
+	communityKey := getRedisKey(KeyCommunitySetPrefix + strconv.Itoa(int(communityID)))
+	pipeline.SAdd(communityKey, postID)
 	_, err = pipeline.Exec()
 	return err
 }
