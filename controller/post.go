@@ -77,7 +77,7 @@ func GetPostListHandler(c *gin.Context) {
 // GetPostListHandler2 升级版帖子列表接口
 // 根据前端传来的参数（创建时间或者分数），动态的获取帖子列表
 func GetPostListHandler2(c *gin.Context) {
-	//1.获取参数
+	//1.获取请求的query string 参数
 	//2.去redis查询id列表
 	//3.根据id去数据库查询帖子的详细信息
 
@@ -86,8 +86,8 @@ func GetPostListHandler2(c *gin.Context) {
 
 	//初始化结构体时指定默认参数
 	p := &models.ParamPostList{
-		Page:  1,
-		Size:  10,
+		Page:  models.DefaultPage,
+		Size:  models.DefaultSize,
 		Order: models.Ordertime,
 	}
 	//c.ShouldBindJSON()如果请求体携带的是json格式的数据，采用这个方法。注意tag的使用！！！

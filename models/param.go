@@ -4,8 +4,10 @@ package models
 // 使用validation库函数，标记tag binding
 
 const (
-	Ordertime  = "time"
-	OrderScore = "score"
+	DefaultPage = 1
+	DefaultSize = 10
+	Ordertime   = "time"
+	OrderScore  = "score"
 )
 
 // ParamSignUp 注册请求参数
